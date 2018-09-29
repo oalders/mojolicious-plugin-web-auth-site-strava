@@ -22,10 +22,6 @@ BEGIN { unshift @INC, "$FindBin::Bin/../lib" }
 use Config::Pit qw( pit_get );
 use Data::Printer;
 use Mojolicious::Lite;
-use URI::FromHash qw( uri );
-
-print STDERR
-    "[NOTICE] should be used in domains other than 'localhost' (e.g. local.example.com)\n";
 
 my $site = 'strava';
 helper site => sub { $site };

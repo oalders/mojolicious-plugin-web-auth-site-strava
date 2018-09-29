@@ -23,16 +23,15 @@ __END__
 
 =head1 SYNOPSIS
 
-    use URI::FromHash qw( uri );
-    my $key = 'foo';
-    my $secret = 'seekrit';
+    my $client_id     = '9999';
+    my $client_secret = 'seekrit';
 
     # Mojolicious
     $self->plugin(
         'Web::Auth',
         module           => 'Strava',
-        key              => $key,
-        secret           => $secret,
+        key              => $client_id,
+        secret           => $client_secret,
         scope       => 'view_private,write',
         on_finished => sub {
             my ( $c, $access_token, $access_secret ) = @_;
@@ -43,8 +42,8 @@ __END__
     # Mojolicious::Lite
     plugin 'Web::Auth',
         module      => 'Strava',
-        key         => $key,
-        secret      => $secret,
+        key         => $client_id,
+        secret      => $client_secret,
         scope       => 'view_private,write',
         on_finished => sub {
         my ( $c, $access_token, $access_secret ) = @_;
