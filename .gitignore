@@ -1,0 +1,5 @@
+.build
+local
+/Mojolicious-Plugin-Web-Auth-Site-Strava*
+*.swp
+.tidyall.d
