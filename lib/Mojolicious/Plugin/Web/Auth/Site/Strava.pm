@@ -52,7 +52,7 @@ __END__
 
 =head1 DESCRIPTION
 
-This module adds L<Strava|https://dev.fitbit.com/docs/> support to
-L<Mojolicious::Plugin::Web::Auth>.
+This module adds L<Strava|https://developers.strava.com/docs/authentication/>
+support to L<Mojolicious::Plugin::Web::Auth>.
 
 =cut
