@@ -2,7 +2,7 @@ use strict;
 use warnings;
 
 package Mojolicious::Plugin::Web::Auth::Site::Strava;
-
+our $VERSION = '0.000002';
 use Mojo::Base qw/Mojolicious::Plugin::Web::Auth::OAuth2/;
 
 has access_token_url => 'https://www.strava.com/oauth/token';
