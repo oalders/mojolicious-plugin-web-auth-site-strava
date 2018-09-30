@@ -10,16 +10,15 @@ version 0.000001
 
 # SYNOPSIS
 
-    use URI::FromHash qw( uri );
-    my $key = 'foo';
-    my $secret = 'seekrit';
+    my $client_id     = '9999';
+    my $client_secret = 'seekrit';
 
     # Mojolicious
     $self->plugin(
         'Web::Auth',
         module           => 'Strava',
-        key              => $key,
-        secret           => $secret,
+        key              => $client_id,
+        secret           => $client_secret,
         scope       => 'view_private,write',
         on_finished => sub {
             my ( $c, $access_token, $access_secret ) = @_;
@@ -30,8 +29,8 @@ version 0.000001
     # Mojolicious::Lite
     plugin 'Web::Auth',
         module      => 'Strava',
-        key         => $key,
-        secret      => $secret,
+        key         => $client_id,
+        secret      => $client_secret,
         scope       => 'view_private,write',
         on_finished => sub {
         my ( $c, $access_token, $access_secret ) = @_;
@@ -40,8 +39,8 @@ version 0.000001
 
 # DESCRIPTION
 
-This module adds [Strava](https://dev.fitbit.com/docs/) support to
-[Mojolicious::Plugin::Web::Auth](https://metacpan.org/pod/Mojolicious::Plugin::Web::Auth).
+This module adds [Strava](https://developers.strava.com/docs/authentication/)
+support to [Mojolicious::Plugin::Web::Auth](https://metacpan.org/pod/Mojolicious::Plugin::Web::Auth).
 
 # AUTHOR
 
